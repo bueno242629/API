@@ -18,9 +18,9 @@ namespace API_EMPLEO.Controllers
         private Model1 db = new Model1();
 
         // GET: api/APPLYJOB
-        public IQueryable<APPLYJOB> GetAPPLYJOB()
+        public IEnumerable<APPLYJOB> GetAPPLYJOB()
         {
-            return db.APPLYJOB;
+            return db.APPLYJOB.ToList();
         }
 
         // GET: api/APPLYJOB/5

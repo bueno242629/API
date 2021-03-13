@@ -17,6 +17,14 @@ namespace API_EMPLEO.Models
 
         public int? userId { get; set; }
 
-        public virtual USERS USERS { get; set; }
+        [StringLength(100)]
+        public string dateStart { get; set; }
+
+        [StringLength(500)]
+        public string name { get; set; }
+
+        [StringLength(500)]
+        public string carrer { get; set; }
     }
 }
+

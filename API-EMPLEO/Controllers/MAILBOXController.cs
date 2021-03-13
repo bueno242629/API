@@ -18,9 +18,9 @@ namespace API_EMPLEO.Controllers
         private Model1 db = new Model1();
 
         // GET: api/MAILBOX
-        public IQueryable<MAILBOX> GetMAILBOX()
+        public IEnumerable<MAILBOX> GetMAILBOX()
         {
-            return db.MAILBOX;
+            return db.MAILBOX.ToList();
         }
 
         // GET: api/MAILBOX/5

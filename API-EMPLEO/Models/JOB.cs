@@ -27,8 +27,8 @@ namespace API_EMPLEO.Models
         [Required]
         public string requirements { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime dateStart { get; set; }
+        
+        public string dateStart { get; set; }
 
         [Required]
         [StringLength(500)]

@@ -36,6 +36,19 @@ namespace API_EMPLEO.Controllers
             return Ok(uSERS);
         }
 
+        [HttpGet]
+        [ResponseType(typeof(USERS))]
+        public async Task<IHttpActionResult> Login(string user, string pass)
+        {
+            USERS uSERS = await db.USERS.Where(x => x.userName == user && x.userPass == pass).FirstOrDefaultAsync();
+            if (uSERS == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(uSERS);
+        }
+
         // PUT: api/USER/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutUSERS(int id, USERS uSERS)

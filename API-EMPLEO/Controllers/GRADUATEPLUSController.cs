@@ -18,9 +18,9 @@ namespace API_EMPLEO.Controllers
         private Model1 db = new Model1();
 
         // GET: api/GRADUATEPLUS
-        public IQueryable<GRADUATEPLUS> GetGRADUATEPLUS()
+        public IEnumerable<GRADUATEPLUS> GetGRADUATEPLUS()
         {
-            return db.GRADUATEPLUS;
+            return db.GRADUATEPLUS.ToList();
         }
 
         // GET: api/GRADUATEPLUS/5
